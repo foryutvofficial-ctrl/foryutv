@@ -8,17 +8,17 @@ document.getElementById('enterBtn').addEventListener('click', () => {
 const seriesData = {
   series1: {
     name: "You Are Desire",
-    trailer: "https://www.w3schools.com/html/mov_bbb.mp4", // optional local video
+    trailer: "youaredesire.mp4", // optional local video
     episodes: ["Episode 1","Episode 2","Episode 3","Episode 4"]
   },
   series2: {
     name: "Reply 1988",
-    trailer: "https://www.w3schools.com/html/movie.mp4",
+    trailer: "reply1988.mp4",
     episodes: ["Episode 1","Episode 2","Episode 3"]
   },
   series3: {
     name: "The Secret of Us",
-    trailer: "https://www.w3schools.com/html/mov_bbb.mp4",
+    trailer: "thesecretofus.mp4",
     episodes: ["Episode 1","Episode 2"]
   }
 };
