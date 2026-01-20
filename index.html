@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Foryu TV</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- WELCOME SPLASH -->
+  <div id="splash">
+    <div class="splash-content">
+      <h1>Foryu TV</h1>
+      <button id="enterBtn">Enter</button>
+    </div>
+  </div>
+
+  <!-- MAIN CONTENT -->
+  <div id="mainContent" class="hidden">
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+      <h1 class="logo">Foryu TV</h1>
+      <nav>
+        <a href="#">Home</a>
+        <a href="#">Series</a>
+        <a href="#">My List</a>
+      </nav>
+    </header>
+
+    <!-- FEATURED SERIES -->
+    <section class="featured">
+      <div class="featured-card" onclick="openSeries('series1')">
+        <img src="https://via.placeholder.com/800x400" alt="Featured Series">
+        <div class="featured-info">
+          <h2>Coming Soon: Crimson Saga</h2>
+          <p>Episode 1 premieres Jan 20, 2026</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERIES GRID -->
+    <section class="series-section">
+      <h2>All Series</h2>
+      <div class="series-grid">
+        <div class="series-card" onclick="openSeries('series1')">
+          <img src="https://via.placeholder.com/200x300" alt="Series 1">
+          <span>Crimson Saga</span>
+        </div>
+        <div class="series-card" onclick="openSeries('series2')">
+          <img src="https://via.placeholder.com/200x300" alt="Series 2">
+          <span>Red Eclipse</span>
+        </div>
+        <div class="series-card" onclick="openSeries('series3')">
+          <img src="https://via.placeholder.com/200x300" alt="Series 3">
+          <span>Velvet Shadows</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERIES MODAL / EPISODES -->
+    <div id="seriesModal" class="modal">
+      <span class="close" onclick="closeSeries()">×</span>
+      <div id="seriesContent"></div>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
