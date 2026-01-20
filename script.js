@@ -1,43 +1,52 @@
 // Splash Enter Button
 document.getElementById('enterBtn').addEventListener('click', () => {
-  document.getElementById('splash').style.display = 'none';
+  document.getElementById('splash').style.display='none';
   document.getElementById('mainContent').classList.remove('hidden');
 });
 
 // Series Data (customizable)
 const seriesData = {
   series1: {
-    name: "Crimson Saga",
-    episodes: ["Episode 1", "Episode 2", "Episode 3", "Episode 4"]
+    name: "You Are Desire",
+    trailer: "https://www.w3schools.com/html/mov_bbb.mp4", // optional local video
+    episodes: ["Episode 1","Episode 2","Episode 3","Episode 4"]
   },
   series2: {
-    name: "Red Eclipse",
-    episodes: ["Episode 1", "Episode 2"]
+    name: "Reply 1988",
+    trailer: "https://www.w3schools.com/html/movie.mp4",
+    episodes: ["Episode 1","Episode 2","Episode 3"]
   },
   series3: {
-    name: "Velvet Shadows",
-    episodes: ["Episode 1", "Episode 2", "Episode 3"]
+    name: "The Secret of Us",
+    trailer: "https://www.w3schools.com/html/mov_bbb.mp4",
+    episodes: ["Episode 1","Episode 2"]
   }
-}
+};
 
 // Open Series Modal
-function openSeries(seriesKey) {
+function openSeries(seriesKey){
   const modal = document.getElementById('seriesModal');
   const content = document.getElementById('seriesContent');
   const series = seriesData[seriesKey];
 
-  let html = `<h2>${series.name}</h2><div class="episode-grid">`;
+  let html = `<h2>${series.name}</h2>`;
+
+  // Add trailer video background
+  if(series.trailer){
+    html += `<video class="series-modal-bg" src="${series.trailer}" autoplay loop muted></video>`;
+  }
+
+  html += `<div class="episode-grid">`;
   series.episodes.forEach(ep => {
     html += `<div class="episode-card">${ep}</div>`;
   });
   html += `</div>`;
 
   content.innerHTML = html;
-  modal.style.display = 'flex';
+  modal.style.display='flex';
 }
 
 // Close Series Modal
-function closeSeries() {
-  const modal = document.getElementById('seriesModal');
-  modal.style.display = 'none';
+function closeSeries(){
+  document.getElementById('seriesModal').style.display='none';
 }
